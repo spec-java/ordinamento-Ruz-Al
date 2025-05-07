@@ -1,7 +1,7 @@
 public class App {
     public static void main(String[] args) throws Exception {
         int[] array = { 54, 21, 9, 15, 52, 68 };
-        System.out.println("Array before sorting: ");
+        System.out.println("Array before bubble sorting: ");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
@@ -10,7 +10,7 @@ public class App {
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
-        System.out.println("\n\nArray before sorting: ");
+        System.out.println("\n\nArray before bogo sorting: ");
         int[] array2 = { 54, 21, 9, 15, 52, 68 };
         for (int i = 0; i < array2.length; i++) {
             System.out.print(array2[i] + " ");
@@ -21,14 +21,14 @@ public class App {
             System.out.print(array2[i] + " ");
         }
 
-        // System.out.println("\n\nString array before sorting: ");
-        // String[] stringArray = { "ale", "riccardo", "mattia", "alessandro", "giulia" };
-        // for (int i = 0; i < stringArray.length; i++) {
-        //     System.out.print(stringArray[i] + " ");
-        // }
-        // BubbleSort.bubbleSortStringByLenght(stringArray);
-        // System.out.println("\nString array after sorting: ");
-        // BubbleSort.printArray(stringArray);
+        System.out.println("\n\nString array before sorting: ");
+        String[] stringArray = { "ale", "riccardo", "mattia", "alessandro", "giulia" };
+        for (int i = 0; i < stringArray.length; i++) {
+            System.out.print(stringArray[i] + " ");
+        }
+        BubbleSort.bubbleSortStringByLenght(stringArray);
+        System.out.println("\nString array after sorting: ");
+        BubbleSort.printArray(stringArray);
     }
 
 
