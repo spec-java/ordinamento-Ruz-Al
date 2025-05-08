@@ -10,6 +10,18 @@ public class App {
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
+
+        System.out.println("\n\nArray before quick sorting: ");
+        int[] array1 = { 54, 21, 9, 15, 52, 68 };
+        for (int i = 0; i < array1.length; i++) {
+            System.out.print(array1[i] + " ");
+        }
+        QuickSort.quickSort(array1, 0, array1.length - 1);
+        System.out.println("\nArray after quick sorting: ");
+        for (int i = 0; i < array1.length; i++) {
+            System.out.print(array1[i] + " ");
+        }
+
         System.out.println("\n\nArray before bogo sorting: ");
         int[] array2 = { 54, 21, 9, 15, 52, 68 };
         for (int i = 0; i < array2.length; i++) {
@@ -95,6 +107,36 @@ public class Bogo {
             }
         }
         return true;
+    }
+}
+
+public class QuickSort {
+    public static void quickSort(int[] array, int beginning, int end) {
+        if (beginning < end) {
+            // prima chiamata: beginning = 0, end = 5
+            int pivotIndex = partition(array, beginning, end);
+            quickSort(array, beginning, pivotIndex - 1);
+            quickSort(array, pivotIndex + 1, end);
+        }
+    }
+    
+    private static int partition(int[] array, int beginning, int end) {
+        int pivot = array[end];
+        int i = (beginning - 1);
+        for (int j = beginning; j < end; j++) {
+            if (array[j] <= pivot) {
+                i++;
+                swap(array, i, j);
+            }
+        }
+        swap(array, i + 1, end);
+        return i + 1;
+}
+
+private static void swap(int[] array, int el1, int el2) {
+        int temp = array[el1];
+        array[el1] = array[el2];
+        array[el2] = temp;
     }
 }
 
