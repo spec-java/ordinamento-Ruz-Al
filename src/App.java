@@ -49,6 +49,7 @@ public class App {
         System.out.println("\n\nString array before bogo sorting: ");
         String[] stringArray1 = { "ale", "riccardo", "mattia", "alessandro", "giulia" };
         for (int i = 0; i < stringArray1.length; i++) {
+            
             System.out.print(stringArray1[i] + " ");
         }
         BogoSort.bogoSort(stringArray1);

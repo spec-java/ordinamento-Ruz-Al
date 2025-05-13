@@ -45,7 +45,7 @@ public class BogoSort {
 
     private static boolean isSorted(String[] arr) {
         for (int x = 0; x < arr.length - 1; ++x) {
-            if (arr[x].compareTo(arr[x + 1]) > 0) {
+            if (arr[x].length() > arr[x + 1].length()) {
                 return false;
             }
         }
