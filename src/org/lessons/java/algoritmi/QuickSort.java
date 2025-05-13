@@ -21,10 +21,37 @@ public class QuickSort {
         }
         swap(array, i + 1, end);
         return i + 1;
-}
+    }
 
-private static void swap(int[] array, int el1, int el2) {
+    private static void swap(int[] array, int el1, int el2) {
         int temp = array[el1];
+        array[el1] = array[el2];
+        array[el2] = temp;
+    }
+
+    public static void quickSort(String[] array, int beginning, int end) {
+        if (beginning < end) {
+            int pivotIndex = partition(array, beginning, end);
+            quickSort(array, beginning, pivotIndex - 1);
+            quickSort(array, pivotIndex + 1, end);
+        }
+    }
+
+    private static int partition(String[] array, int beginning, int end) {
+        String pivot = array[end];
+        int i = (beginning - 1);
+        for (int j = beginning; j < end; j++) {
+            if (array[j].length() <= pivot.length()) {
+                i++;
+                swap(array, i, j);
+            }
+        }
+        swap(array, i + 1, end);
+        return i + 1;
+    }
+
+    private static void swap(String[] array, int el1, int el2) {
+        String temp = array[el1];
         array[el1] = array[el2];
         array[el2] = temp;
     }

@@ -42,9 +42,12 @@ public class App {
         for (int i = 0; i < stringArray.length; i++) {
             System.out.print(stringArray[i] + " ");
         }
-        BubbleSort.bubbleSortStringByLenght(stringArray);
+        QuickSort.quickSort(stringArray, 0, stringArray.length - 1);
         System.out.println("\nString array after sorting: ");
-        BubbleSort.printArray(stringArray);
+        for (int i = 0; i < stringArray.length; i++) {
+            
+            System.out.print(stringArray[i] + " ");
+        }
 
         System.out.println("\n\nString array before bogo sorting: ");
         String[] stringArray1 = { "ale", "riccardo", "mattia", "alessandro", "giulia" };
